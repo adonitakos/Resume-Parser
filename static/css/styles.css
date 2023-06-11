@@ -1,11 +1,11 @@
-
-*{
+/* File: /static/css/styles.css */
+* {
     box-sizing: border-box;
     margin: 0;
-    padding:0;
-    color: black;
-    
+    padding: 0;
+    color: rgb(255, 255, 255);   
 }
+
 #myVideo {
     position: fixed;
     right: 0;
@@ -14,10 +14,9 @@
     left: 0;
     width:100%;
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
     z-index: -1;
-  }
-  
+}
 
 body {
     display: flex;
@@ -30,14 +29,15 @@ body {
 }
 
 h1 {
-    position:relative;
+    position: relative;
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
     font-size: 3.0em;   
     z-index: 1;
 }
-.parser-in-red{
+
+.parser-in-red {
     color: red;
     text-decoration: none;
 }
@@ -53,6 +53,7 @@ h1 {
 }
 
 .choose-file {
+    color: black;
     margin-top: 0.5em;
     margin-bottom: 1em;
     width: 9em;
@@ -67,7 +68,6 @@ h1 {
     box-shadow: 6px 6px 12px #ffffff,
                 -6px -6px px #ffffff;
 }
-
 
 .choose-file::before {
     content: '';
@@ -87,7 +87,7 @@ h1 {
     width: 9em;
 }
 
-.second-section{
+.second-section {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -109,6 +109,7 @@ input[type="text"] {
 }
 
 .search-btn {
+    color: black;
     margin-top: 2em;
     margin-bottom: 2.5em;
     width: 9em;
@@ -140,16 +141,16 @@ input[type="text"] {
 .search-btn:hover::before {
     width: 9em;
 }
-.username{
+.username {
     position: relative;
     margin-bottom: 2em;
 }
 
-h2{
+h2 {
     position: relative;
     margin: 1em;
 }
-p{
+p {
     position: relative;
     margin-top: 2em;
     font-size: 2em;
@@ -172,20 +173,17 @@ p{
     height: 3em;
     margin: 0 0.5em;
 }
+
 .text_size::placeholder {
     font-size: 1em;
-  }
-.keywords{
-    
-    margin-top: 1em;
 }
 
+.keywords{    
+    margin-top: 1em;
+}
 
 .key_word_prompt{
     position: relative;
     margin-bottom: 1em;
     color: white;
 }
-
-
-
