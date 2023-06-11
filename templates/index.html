@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+<link rel="stylesheet" href="/static/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<h1>Resume <span class="parser-in-red">Parser</span></h1><!--Header-->
+
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+    <source src="/videos/pexels-tima-miroshnichenko-5651589-1280x720-25fps.mp4" type="video/mp4"><!--Background Video-->
+</video>
+
+
+<div class="first-section">
+<button class="choose-file">Choose File</button>
+<p>Files can be of <span class="parser-in-red">.txt</span>, <span class="parser-in-red">.pdf</span> and <span class="parser-in-red">word document</span></p>
+</div>
+
+<div class="my_images"><!--small icons of files-->>
+   
+    <img src="/images/bxs-file-txt.png" alt=".txt file icon">
+    <img src="/images/bxs-file-pdf.png" alt=".pdf file icon">
+    <img src="/images/bxs-file-doc.png" alt=".doc file icon">
+</div>
+
+
+
+
+<div class="second-section">
+    <h2>Key<span class="parser-in-red">words</span></h2><!--Red colored words 'spanned'-->>
+    <form>
+        <label for="keywords" class="key_word_prompt">Enter Key words</label>
+        <input type="text" class="text_size" id="keywords" name="keywords">  <!--Prompt for input-->      
+    </form>
+    <button class="search-btn">search</button><!--Search Button-->
+</div>
+
+    
+</body>
+</html>
