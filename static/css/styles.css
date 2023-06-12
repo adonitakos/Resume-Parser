@@ -3,7 +3,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255);   
 }
 
 #myVideo {
@@ -12,7 +11,7 @@
     bottom: 0;
     top: 0;
     left: 0;
-    width:100%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     z-index: -1;
@@ -30,11 +29,12 @@ body {
 
 h1 {
     position: relative;
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-bottom: 1em;
     text-align: center;
     font-size: 3.0em;   
     z-index: 1;
+    color: white;
 }
 
 .parser-in-red {
@@ -52,7 +52,7 @@ h1 {
     margin-top: 2em;
 }
 
-.choose-file {
+.upload_btn {
     color: black;
     margin-top: 0.5em;
     margin-bottom: 1em;
@@ -60,7 +60,8 @@ h1 {
     height: 3em;
     border-radius: 30em;
     font-size: 15px;
-    font-family: inherit;    
+    font-family: inherit;   
+    font-weight: bold; 
     border: none;
     position: relative;
     overflow: hidden;
@@ -69,7 +70,7 @@ h1 {
                 -6px -6px px #ffffff;
 }
 
-.choose-file::before {
+.upload_btn::before {
     content: '';
     width: 0;
     height: 3em;
@@ -83,8 +84,9 @@ h1 {
     z-index: -1;
 }
 
-.choose-file:hover::before {
+.upload_btn:hover::before {
     width: 9em;
+    cursor: pointer;
 }
 
 .second-section {
@@ -117,11 +119,12 @@ input[type="text"] {
     border-radius: 30em;
     font-size: 15px;
     font-family: inherit;
+    font-weight: bold; 
     border: none;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    
+    transform: translateX(70px);
 }
 
 .search-btn::before {
@@ -140,6 +143,7 @@ input[type="text"] {
 
 .search-btn:hover::before {
     width: 9em;
+    cursor: pointer;
 }
 .username {
     position: relative;
@@ -149,11 +153,13 @@ input[type="text"] {
 h2 {
     position: relative;
     margin: 1em;
+    color: white;
 }
 p {
     position: relative;
     margin-top: 2em;
     font-size: 2em;
+    color: white;
 }
 
 .my_images {
@@ -178,12 +184,30 @@ p {
     font-size: 1em;
 }
 
-.keywords{    
+.keyword {    
     margin-top: 1em;
+    color: white;
+    font-weight: bold;
 }
 
 .key_word_prompt{
     position: relative;
     margin-bottom: 1em;
-    color: white;
+}
+
+.result-container {
+    display: grid;
+    place-content: center;
+    border-style: solid;
+    border-color: #de1919;
+    padding: 20px 300px;
+    margin-bottom: 25px;
+    background: rgb(214,224,217);
+    background: radial-gradient(circle, rgba(214,224,217,1) 64%, rgba(227,183,183,1) 100%);
+}
+
+.result {
+    color: black;
+    font-size: 18px;
+    margin-top: 15px;
 }

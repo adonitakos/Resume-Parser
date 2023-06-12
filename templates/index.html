@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <h1>Resume <span class="parser-in-red">Parser</span></h1>
+    <h1 class="banner">Resume <span class="parser-in-red">Parser</span></h1>
     <!--Header-->
 
     <!-- The video -->
@@ -28,7 +28,10 @@
     </video>
 
     <div class="first-section">
-      <button class="choose-file">Choose File</button>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" class="choose_file" />
+        <button type="submit" value="Upload" class="upload_btn">Upload</button>
+      </form>
       <p>
         Files can be of <span class="parser-in-red">.txt</span>,
         <span class="parser-in-red">.pdf</span> and
@@ -37,23 +40,38 @@
     </div>
 
     <div class="my_images">
-      <!--small icons of files-->
-
+      <!-- small icons of files -->
       <img src="/static/images/bxs-file-txt.png" alt=".txt file icon" />
       <img src="/static/images/bxs-file-pdf.png" alt=".pdf file icon" />
       <img src="/static/images/bxs-file-doc.png" alt=".doc file icon" />
     </div>
 
     <div class="second-section">
-      <h2>Key<span class="parser-in-red">words</span></h2>
       <!--Red colored words 'spanned'-->
-      <form>
-        <label for="keywords" class="key_word_prompt">Enter Key words</label>
-        <input type="text" class="text_size" id="keywords" name="keywords" />
-        <!--Prompt for input-->
-      </form>
-      <button class="search-btn">Search</button
-      ><!--Search Button-->
+      <h2>Key<span class="parser-in-red">words</span></h2>
+
+    <form action="{{ url_for('search') }}" method="POST" class="keyword_form">
+        <input type="text" name="keyword" class="keyword_search_bar"/>
+        <button
+          type="submit"
+          value="Search"
+          class="search-btn"
+        >Search</button>
+    </form>
+  
+      {% if uploaded %}
+      <h3>File uploaded successfully</h3>
+      {% endif %}
+  
+
+      <div class="result-container">
+        {% for result in results %}
+        <p class="result">{{ result }}</p>
+        {% endfor %}
+      </div>
+  
     </div>
+
+
   </body>
 </html>
